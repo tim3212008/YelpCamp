@@ -63,11 +63,11 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 seedDB();
 
 
-// app.listen(process.env.PORT, process.env.IP, function() {
-//     console.log("Server is listening on " + process.env.PORT);
-// });
-
-
-app.listen(3000, function() {
-    console.log("Server is listening on " + 3000);
+app.listen(process.env.PORT, process.env.IP, function() {
+    console.log("Server is listening on " + process.env.PORT);
 });
+
+
+// app.listen(3000, function() {
+//     console.log("Server is listening on " + 3000);
+// });
