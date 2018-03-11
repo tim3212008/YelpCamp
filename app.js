@@ -18,7 +18,8 @@ var commentRoutes = require("./routes/comments"),
     indexRoutes = require("./routes/index");
 
 //connect to database
-mongoose.connect("mongodb://localhost/yelp_camp");
+mongoose.connect("mongodb://<dbuser>:<dbpassword>@ds253468.mlab.com:53468/myyelpcamp");
+// mongoose.connect("mongodb://localhost/yelp_camp");
 
 //setting up basic tools
 app.use(bodyParser.urlencoded({extended: true}));
@@ -62,6 +63,6 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 seedDB();
 
 
-app.listen(process.env.PORT, process.env.IP, function() {
-    console.log("Server is listening on " + process.env.PORT);
+app.listen(3000, function() {
+    console.log("Server is listening on " + 3000);
 });
