@@ -60,7 +60,7 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 
 //setting seed.
-seedDB();
+// seedDB();
 
 
 app.listen(process.env.PORT, process.env.IP, function() {
